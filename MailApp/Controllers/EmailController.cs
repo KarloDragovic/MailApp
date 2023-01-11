@@ -43,7 +43,7 @@ namespace MailApp.Controllers
         {
             if(email == null) return BadRequest();
 
-            var emailToSend = new Email();
+            Email? emailToSend;
 
             try
             {
@@ -53,8 +53,8 @@ namespace MailApp.Controllers
                     To = email.To,
                     Importance = (Importance)email.Importance,
                     Subject = email.Subject,
-                    Bcc = email.Bcc.Split(',').ToList(),
-                    Cc = email.Cc.Split(',').ToList(),
+                    Bcc = string.IsNullOrEmpty(email.Bcc) ? new List<string>() : email.Bcc.Split(',').ToList(),
+                    Cc = string.IsNullOrEmpty(email.Cc) ? new List<string>() : email.Cc.Split(',').ToList(),
                     Body = email.Body,
                     CreatedOn = DateTime.Now,
                     CreatedBy = email.From.Substring(0, email.From.IndexOf("@"))
