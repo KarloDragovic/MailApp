@@ -1,0 +1,41 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  margin-top: 10px;
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.formErrors{
+  color: red;
+}
+
+.formStatus{
+  color: green;
+}
+
+.card{
+  width: 10%;
+  margin: auto;
+}
+
+.p-confirm-popup{
+  width: 40% !important;
+  margin: auto !important;
+}
+
+.p-toast{
+  width: 100% !important;
+}
