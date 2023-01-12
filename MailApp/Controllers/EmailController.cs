@@ -27,11 +27,12 @@ namespace MailApp.Controllers
             if (emails != null)
                 return Ok(emails.Select(email => new EmailListDto
                 {
+                    Id= email.Id,
                     From = email.From,
                     To = email.To,
                     Importance = email.Importance.ToString(),
                     Subject = email.Subject,
-                    SentOn = email.CreatedOn
+                    SentOn = email.CreatedOn.ToString("dd/MM/yyyy HH:mm:ss")
                 }).OrderByDescending(e => e.SentOn));
             else
                 return BadRequest();

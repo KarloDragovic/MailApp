@@ -11,10 +11,11 @@ namespace MailApp.Application.Dtos
 {
     public class EmailListDto
     {
+        public int Id { get; set; }
         public string From { get; set; }
         public string To { get; set; }
         public string Subject { get; set; }
         public string Importance { get; set; }
-        public DateTime SentOn { get; set; }
+        public string SentOn { get; set; }
     }
 }
