@@ -25,14 +25,14 @@ namespace MailApp.Controllers
             var emails = _emailRepository.GetEmails();
 
             if (emails != null)
-                return Ok( emails.Select(email => new EmailListDto
+                return Ok(emails.Select(email => new EmailListDto
                 {
                     From = email.From,
                     To = email.To,
                     Importance = email.Importance.ToString(),
                     Subject = email.Subject,
                     SentOn = email.CreatedOn
-                }));
+                }).OrderByDescending(e => e.SentOn));
             else
                 return BadRequest();
         }

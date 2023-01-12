@@ -48,13 +48,13 @@ export class FetchMails extends Component {
       <div>
         <h1 id="tableLabel">Emails</h1>
         <p>All sent E-mails.</p>
-        {contents}
+        <div className='table'>{contents}</div>
       </div>
     );
   }
 
   async populateMailsData() {
-    const response = await fetch('http://localhost:5119/email/getEmails');
+      const response = await fetch('https://emailappq.azurewebsites.net/email/getEmails');
     const data = await response.json();
     this.setState({ mails: data, loading: false });
   }

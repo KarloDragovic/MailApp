@@ -32,10 +32,37 @@ code {
 }
 
 .p-confirm-popup{
-  width: 40% !important;
-  margin: auto !important;
+  padding: 10px;
+  background-color: rgb(0, 0, 0, .8);
+  color:white !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  margin-top: -50px !important;
+  margin-left: -50px !important;
+  width: 230px !important;
+  height: 150px !important;
+  border-radius: 6px;
+}
+
+.p-confirm-popup-content{
+  text-align: center;
+}
+
+.p-confirm-popup-footer .p-button{
+  margin-left: 2em;
+  padding: 1em !important;
+  border: solid 1px #e7d10b !important;
+  border-radius: 4px !important;
+  margin-top: 1em !important;
 }
 
 .p-toast{
   width: 100% !important;
+}
+
+.table{
+  background-color: #fceea2;
+  border-radius: 6px;
+  padding: 1em;
 }
